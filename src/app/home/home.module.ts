@@ -6,8 +6,7 @@ import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { QuoteService } from './quote.service';
-import {CarouselModule} from 'angular-bootstrap-md';
+import {MediaFrameModule} from '@app/shared/media-frame/media-frame.module';
 
 @NgModule({
     imports: [
@@ -16,7 +15,7 @@ import {CarouselModule} from 'angular-bootstrap-md';
         CoreModule,
         SharedModule,
         HomeRoutingModule,
-        CarouselModule
+        MediaFrameModule
     ],
   declarations: [
     HomeComponent

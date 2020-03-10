@@ -1,38 +1,40 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {TranslateModule} from '@ngx-translate/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
-import { HomeModule } from './home/home.module';
-import { ShellModule } from './shell/shell.module';
-import { AboutModule } from './about/about.module';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {CoreModule} from '@app/core';
+import {SharedModule} from '@app/shared';
+import {HomeModule} from './home/home.module';
+import {ShellModule} from './shell/shell.module';
+import {AboutModule} from './about/about.module';
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {ApiService} from '@app/services/api.service';
+import {MediaService} from '@app/services/media.service';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    TranslateModule.forRoot(),
-    NgbModule,
-    CoreModule,
-    SharedModule,
-    ShellModule,
-    HomeModule,
-    AboutModule,
-    MDBBootstrapModule.forRoot(),
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
-  ],
-  declarations: [AppComponent],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        TranslateModule.forRoot(),
+        NgbModule,
+        CoreModule,
+        SharedModule,
+        ShellModule,
+        HomeModule,
+        AboutModule,
+        AppRoutingModule // must be imported as the last module as it contains the fallback route
+    ],
+    declarations: [AppComponent],
+    providers: [
+        ApiService,
+        MediaService
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

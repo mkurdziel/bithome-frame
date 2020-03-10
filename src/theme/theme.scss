@@ -2,4 +2,6 @@
  * Global application theme.
  * Framework overrides and customization goes here.
  */
-
+html, body, .view, .carousel, .carousel-inner {
+  height: 100vh;
+}

@@ -1,0 +1,12 @@
+<div class="row h-100 frame">
+    <div class="d-block w-100 image-fader" [ngClass]="{hidden:imageVisibleB}">
+        <img #imageA
+             [src]="imageSourceA"
+             (load)="imageOnLoad(true)">
+    </div>
+    <div class="d-block w-100 image-fader" [ngClass]="{hidden:imageVisibleA}">
+        <img #imageB
+             [src]="imageSourceB"
+             (load)="imageOnLoad(false)">
+    </div>
+</div>
